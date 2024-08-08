@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="image.js"></script>
+  <style>
+    body {
+      min-height: 3000px;
+      background-color: gray;
+    }
+
+    .scanimation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 700px;
+      position: relative;
+    }
+
+    .image-wrapper {
+      background-color: red;
+    }
+
+    .image-row {
+      width: 100%;
+      display: flex;
+    }
+
+    .image-block {
+      display: flex;
+    }
+
+    .film-container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: auto;
+    }
+
+    .film-wrapper {
+      width: 300vw;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    .film {
+      width: 100dvw;
+      height: 100%;
+      display: flex;
+    }
+
+    .bar {
+      background-color: black;
+      height: 100%;
+    }
+
+    .show-film-btn {
+      position: fixed;
+      top: 0;
+      left: 0;
+
+    }
+
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="scanimation">
+    <div class="image-wrapper"></div>
+    <div class="film-container">
+      <div class="film-wrapper">
+        <div class="film"></div>
+      </div>
+    </div>
+  </div>
+  <button class="show-film-btn">show film</button>
+  <button class="triangle-btn">triangle</button>
+  <button class="sector-btn">sector</button>
+  <button class="pacman-btn">pacman</button>
+</body>
+<script src="script.js"></script>
+
+</html>
