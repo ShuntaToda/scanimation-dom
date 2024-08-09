@@ -12,7 +12,8 @@ body {
 }
 
 .image-wrapper {
-  background-color: red;
+  background-color: rgb(255, 131, 131);
+  border-radius: 10px;
 }
 
 .image-row {
