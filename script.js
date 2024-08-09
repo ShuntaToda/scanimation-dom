@@ -82,7 +82,6 @@ const createScanimation = (image) => {
       const block = document.createElement("div")
       block.classList.add("image-block")
       block.style.height = "100%"
-      // block.style.width = imageBlockSize + "px"
       image.forEach(content => {
         const imageContentEl = document.createElement("div")
         imageContentEl.style.width = contentElWidth + "px"
