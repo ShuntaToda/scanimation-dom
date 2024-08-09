@@ -73,7 +73,7 @@ filmWrapper.style.width = (imageSize * 7) + "px"
 // スキャニメーション生成
 const createScanimation = (image) => {
   imageWrapper.innerHTML = ""
-
+  const contentElWidth = (imageBlockSize / numberOfImage)
   for (let i = 0; i < numberOfBlock; i++) {
     const row = document.createElement("div")
     row.classList.add("image-row")
@@ -85,7 +85,7 @@ const createScanimation = (image) => {
       // block.style.width = imageBlockSize + "px"
       image.forEach(content => {
         const imageContentEl = document.createElement("div")
-        imageContentEl.style.width = (imageBlockSize / numberOfImage) + "px"
+        imageContentEl.style.width = contentElWidth + "px"
         imageContentEl.style.height = "100%"
         if (content[i][j] === 1) {
           imageContentEl.style.background = "black"
@@ -100,14 +100,15 @@ const createScanimation = (image) => {
     imageWrapper.appendChild(row)
   }
   // film追加処理
+  film.innerHTML = ""
   for (let i = 0; i < (imageSize / imageBlockSize) * 2; i++) {
     const blackBar = document.createElement("div")
     const bar = document.createElement("div")
     blackBar.classList.add("bar")
-    blackBar.style.minWidth = (imageBlockSize - (imageBlockSize / numberOfImage)) + "px"
-    blackBar.style.width = (imageBlockSize - (imageBlockSize / numberOfImage)) + "px"
+    blackBar.style.minWidth = (imageBlockSize - contentElWidth) + "px"
+    blackBar.style.width = (imageBlockSize - contentElWidth) + "px"
 
-    bar.style.minWidth = (imageBlockSize / numberOfImage) + "px"
+    bar.style.minWidth = contentElWidth + "px"
     film.appendChild(blackBar)
     film.appendChild(bar)
   }
